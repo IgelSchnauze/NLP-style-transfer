@@ -16,11 +16,30 @@ This work relies on researches
 ![](.no_progr_stuff/GAN_model.jpg)
 
 ## How to run
+`download_data.ipynb` for download poems from site
+
+`data_preproc.ipynb` to preprocess news from dataset and downloaded poems and make new token model
+
+`gru_seq2seq.ipynb` for training and validation generator withour style vectors
+
+`Style_transfer_model.ipynb` for training and validation GAN
+
+`Style_transfer_model_len.ipynb` for training and validation GAN with the progressive length upbuiding
+
+`CNN_discr_STresult_Test.ipynb` to try using final model or count metrics for results
 
 ## Data
- I have used 2 styles - poems and news.
-#### datasets
-#### preprocessing
+ I have worked with russian language only and used 2 styles - poems and news.
+ 
+### datasets
+- [Dataset](https://github.com/RossiyaSegodnya/ria_news_dataset) with russian news (abt 1 mln)
+- Poems from portal [Stihi.ru](https://stihi.ru/poems/)
+
+### preprocessing
+- sentence tokenizer NLTK
+- re-expresssions
+- tokenizer [YouTokenToMe](https://github.com/VKCOM/YouTokenToMe)
+- pretrained word embeddings from [Navec](https://github.com/natasha/navec) (only for test metrics)
 
 ## Samples
 ### news to poem
